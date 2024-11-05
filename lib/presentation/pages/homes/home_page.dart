@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weather_app/apps/routes/app_routes.dart';
 import 'package:weather_app/presentation/controllers/weather_controller.dart';
 
 import 'widgets/home_detail_weather.dart';
@@ -13,6 +14,13 @@ class HomePage extends GetView<WeatherController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Get.toNamed(AppRoutes.detail);
+            },
+            icon: const Icon(Icons.list)),
+      ),
       body: Container(
         alignment: Alignment.center,
         decoration: const BoxDecoration(

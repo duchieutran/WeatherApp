@@ -6,18 +6,18 @@ import 'package:weather_app/domain/models/weather_model.dart';
 class WeatherDetail {
   Main main;
   Weather weather;
-  String dt_txt; // TODO : sua bien
+  String dtTxt; // TODO : sua bien
   WeatherDetail({
     required this.main,
     required this.weather,
-    required this.dt_txt,
+    required this.dtTxt,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'main': main.toMap(),
       'weather': weather.toMap(),
-      'dt_txt': dt_txt,
+      'dt_txt': dtTxt,
     };
   }
 
@@ -25,12 +25,11 @@ class WeatherDetail {
     return WeatherDetail(
       main: Main.fromMap(map['main'] as Map<String, dynamic>),
       weather: Weather.fromMap(map['weather'][0] as Map<String, dynamic>),
-      dt_txt: map['dt_txt'] as String,
+      dtTxt: map['dt_txt'] as String,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory WeatherDetail.fromJson(String source) =>
-      WeatherDetail.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory WeatherDetail.fromJson(String source) => WeatherDetail.fromMap(json.decode(source) as Map<String, dynamic>);
 }

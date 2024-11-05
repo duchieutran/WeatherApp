@@ -1,5 +1,3 @@
-import 'package:geolocator/geolocator.dart';
-
 class PositionModel {
   double? latitude;
   double? longitude;

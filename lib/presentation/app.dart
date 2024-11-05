@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
 import 'package:weather_app/apps/routes/app_pages.dart';
 import 'package:weather_app/apps/routes/app_routes.dart';
 import 'package:weather_app/apps/themes/theme_custom.dart';
-import 'package:weather_app/domain/models/position_model.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

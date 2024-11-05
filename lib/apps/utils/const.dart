@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 const linkAsset = 'assets/images/weathers/';
 
 class AssetCustom {
-  static String getLinkImg(String name) =>
-      '$linkAsset${name.replaceAll(' ', '').toLowerCase()}.png';
+  static String getLinkImg(String name) => '$linkAsset${name.replaceAll(' ', '').toLowerCase()}.png';
 }
 
 class MyKey {
-  static const String api_token = 'dc50ae7930cbe003b0482b619df050c8';
+  static const String apiToken = 'dc50ae7930cbe003b0482b619df050c8';
 }
 
 Widget createTemp(num temp, {double size = 100}) {
